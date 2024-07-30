@@ -2,27 +2,46 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Encriptar y Desencriptar Mensajes</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="./assets/icono.jpg">
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>Encriptador de Texto</title>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 <body>
-    <div class="container">
-        <div class="left-panel">
-            <h1>Ingrese el texto aquí</h1>
-            <textarea id="mensaje" rows="4" cols="50"></textarea>
-            <p class="note">Solo letras minúsculas y sin acentos</p>
-            <div class="buttons">
-                <button onclick="encriptarMensaje()" class="btn-encriptar">Encriptar</button>
-                <button onclick="desencriptarMensaje()" class="btn-desencriptar">Desencriptar</button>
+    <header>
+        <a href="#" rel="">
+            <img src="./assets/logo.svg" alt="Logo-Alura" class="logo">
+        </a>    
+    </header>
+    <main>
+        <section class="encriptador">
+            <textarea class="encriptar" placeholder="Ingrese el texto aquí"></textarea>
+            <div class="encriptador-aviso">
+                <img src="./assets/aviso.svg" alt="Imagen-Aviso" class="img-aviso">
+                <p class="texto-aviso">Solo letras minúsculas y sin acentos</p>
             </div>
-        </div>
-        <div class="right-panel">
-            <h2>Ningún mensaje fue encontrado</h2>
-            <p>Ingresa el texto que desees encriptar o desencriptar.</p>
-            <p id="resultado"></p>
-        </div>
-    </div>
-    <script src="script.js"></script>
+            <div class="encriptador-contenedor">
+                <button type="submit" class="btn-encriptar">Encriptar!</button>
+                <button type="submit" class="btn-desencriptar">Desencriptar!</button>
+            </div>
+        </section>
+        <section class="tarjeta">
+           <div class="tarjeta-contenedor">
+                <img src="./assets/muñeco.svg" alt="Imagen Muñeco" class="img-muñeco">
+                <p class="texto-uno">Ningún mensaje fue encontrado</p>
+                <p class="texto-dos">Ingrese el texto que deseas encriptar o desencriptar</p>
+           </div>
+           <textarea type="mensaje" class="evaluar" readonly></textarea>
+           <button type="submit" class="btn-copiar">Copiar</button>
+         </section>  
+    </main>
+    <footer>
+        <p class="copyright">&copy; copyright 2024 - Encriptador de texto - desarrollado por Nestor Ivan Rodriguez</p>
+    </footer>
+
+    <script src="/script/script.js"></script>
+
 </body>
 </html>
